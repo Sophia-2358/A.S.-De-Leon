@@ -1,0 +1,93 @@
+/* ---------- PIN card wrapper — aligned to top ---------- */
+.pin-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+    padding: 20px 20px 0 20px;
+}
+
+.pin-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 46px 42px;
+    width: 100%;
+    max-width: 390px;
+    box-shadow: 0 4px 16px rgba(20, 30, 70, 0.10);
+    text-align: center;
+}
+
+.pin-card .field {
+    margin-bottom: 23px;
+    text-align: left;
+}
+
+.pin-card label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #162033;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.pin-input {
+    width: 100%;
+    height: 69px;
+    border: 2px solid #dde2ee;
+    border-radius: 9px;
+    background: #fff;
+    padding: 0 20px;
+    font-size: 37px;
+    letter-spacing: 18px;
+    color: #162033;
+    outline: 0;
+    text-align: center;
+}
+
+.pin-input:focus {
+    border-color: #2530c0;
+    box-shadow: 0 0 0 3px rgba(37, 48, 192, 0.12);
+}
+
+.pin-card button {
+    width: 100%;
+    height: 51px;
+    margin-top: 9px;
+    background: #2530c0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pin-card button:hover { background: #1b25a0; }
+.pin-card button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.pin-card .alert {
+    display: none;
+    background: #fce4e2;
+    border: 1px solid #efa9a5;
+    color: #8d1d18;
+    font-size: 12px;
+    line-height: 1.4;
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.pin-card .alert.show { display: block; }
+
+.shake { animation: shake 0.1s linear 4; }
+
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-4px); }
+    50%  { transform: translateX(0); }
+    75%  { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
